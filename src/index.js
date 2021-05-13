@@ -24,16 +24,15 @@ hightInstance
   })
   .on(Highlighter.event.CREATE, ({ sources }) => {
     console.log('create -', sources);
-    sources.forEach((s) => {
-      const position = getMarkerPosition(hightInstance.getDoms(s.id)[0]);
-      createTag(position.top, position.left, s.id);
-    });
-    sources = sources.map((hs) => ({ hs }));
+    // sources.forEach((s) => {
+    //   const position = getMarkerPosition(hightInstance.getDoms(s.id)[0]);
+    //   createTag(position.top, position.left, s.id);
+    // });
   })
   .on(Highlighter.event.REMOVE, ({ ids }) => {
     console.log('remove -', ids);
   });
 
-listenRemove();
+// listenRemove();
 
 hightInstance.run();
