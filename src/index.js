@@ -1,5 +1,5 @@
 import Highlighter from 'web-highlighter';
-import { releaseCopy } from './dom';
+import { releaseCopy, createSwitch } from './dom';
 import { DEFAULT_COLOR, HOVER_COLOR } from './types'
 
 export const hightInstance = new Highlighter({
@@ -26,5 +26,7 @@ hightInstance
   .on(Highlighter.event.REMOVE, ({ ids }) => {
     console.log('remove -', ids);
   });
-
+  
 hightInstance.run();
+
+createSwitch();

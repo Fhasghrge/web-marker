@@ -23,3 +23,16 @@
   line-height: 18px;
   overflow: visible;
 }
+.web-marker-switch {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cadetblue;
+  width: max-content;
+  height: 2em;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
