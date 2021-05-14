@@ -12,15 +12,13 @@ export const createTag = (top, left, id) => {
   document.body.appendChild($span);
 };
 
-export const listenRemove = () => {
-  document.addEventListener('click', (e) => {
-    const $ele = e.target;
-    if ($ele.classList.contains(DEFAULT_COLOR)) {
-      const id = $ele.dataset.id;
-      log('*click remove-tip*', id);
-      hightInstance.removeClass(HOVER_COLOR, id);
-      hightInstance.remove(id);
-      $ele.parentNode.removeChild($ele);
+export const releaseCopy = (text) => {
+  document.addEventListener('copy', (e) => {
+    const clipBordData = e.clipboardData || window.clipBordData;
+    if(!clipBordData) return;
+    if(text.trim()) {
+      e.preventDefault()
+      clipBordData.setData('text/plain', text)
     }
   })
 }

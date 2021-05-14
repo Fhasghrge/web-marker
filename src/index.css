@@ -4,7 +4,8 @@
 }
 
 .highlight-wrap-hover {
-  background: #d8bcbc;
+  background: rgb(192, 171, 171);
+  cursor: grab;
 }
 
 .temp-marker-remove-tip {

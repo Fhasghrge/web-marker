@@ -1,1 +1,0 @@
-/*! web-highlighter v0.7.1 https://github.com/alienzhou/web-highlighter */

@@ -1,6 +1,5 @@
 import Highlighter from 'web-highlighter';
-import { createTag, listenRemove } from './dom';
-import { getMarkerPosition } from './util'
+import { releaseCopy } from './dom';
 import { DEFAULT_COLOR, HOVER_COLOR } from './types'
 
 export const hightInstance = new Highlighter({
@@ -11,28 +10,21 @@ export const hightInstance = new Highlighter({
 
 
 hightInstance
-  .on(Highlighter.event.CLICK, (e) => {
-    console.log('click -', e);
+  .on(Highlighter.event.CLICK, ({ id }) => {
+    hightInstance.remove(id);
   })
   .on(Highlighter.event.HOVER, ({ id }) => {
-    console.log('hover -', id);
     hightInstance.addClass(HOVER_COLOR, id);
   })
   .on(Highlighter.event.HOVER_OUT, ({ id }) => {
-    console.log('hover out -', id);
     hightInstance.removeClass(HOVER_COLOR, id);
   })
   .on(Highlighter.event.CREATE, ({ sources }) => {
-    console.log('create -', sources);
-    // sources.forEach((s) => {
-    //   const position = getMarkerPosition(hightInstance.getDoms(s.id)[0]);
-    //   createTag(position.top, position.left, s.id);
-    // });
+    const text = sources && sources[0].text;
+    releaseCopy(text);
   })
   .on(Highlighter.event.REMOVE, ({ ids }) => {
     console.log('remove -', ids);
   });
-
-// listenRemove();
 
 hightInstance.run();
