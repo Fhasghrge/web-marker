@@ -26,7 +26,5 @@ hightInstance
   .on(Highlighter.event.REMOVE, ({ ids }) => {
     console.log('remove -', ids);
   });
-  
-hightInstance.run();
 
 createSwitch();

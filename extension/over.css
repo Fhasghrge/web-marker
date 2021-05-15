@@ -26,13 +26,16 @@
 .web-marker-switch {
   position: fixed;
   top: 50px;
-  right: 50px;
+  right: 15px;
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: cadetblue;
   width: max-content;
-  height: 2em;
   border-radius: 8px;
-  padding: 5px 10px;
+  padding: 5px 8px;
+}
+.web-marker-name {
+  margin-left: 8px;
 }

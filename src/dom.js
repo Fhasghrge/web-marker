@@ -28,7 +28,7 @@ export const createSwitch = () => {
   const $span = document.createElement('span');
   $label.classList.add('web-marker-switch');
   $checkbox.type = 'checkbox';
-  $checkbox.defaultChecked = true;
+  $checkbox.defaultChecked = false;
   $span.classList.add('web-marker-name')
   $span.textContent = '打开高亮功能'
   $checkbox.addEventListener('change', e => {
