@@ -26,7 +26,7 @@
 .web-marker-switch {
   position: fixed;
   top: 50px;
-  right: 15px;
+  right: 0px;
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -34,8 +34,9 @@
   background-color: cadetblue;
   width: max-content;
   border-radius: 8px;
-  padding: 5px 8px;
+  padding: 5px;
+  font-size: 12px;
 }
 .web-marker-name {
-  margin-left: 8px;
+  margin-left: 2px;
 }
