@@ -39,4 +39,6 @@
 }
 .web-marker-name {
   margin-left: 2px;
+  color: red;
+  font-weight: bold;
 }

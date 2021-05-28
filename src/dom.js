@@ -30,7 +30,7 @@ export const createSwitch = () => {
   $checkbox.type = 'checkbox';
   $checkbox.defaultChecked = false;
   $span.classList.add('web-marker-name')
-  $span.textContent = 'light'
+  $span.textContent = 'L'
   $checkbox.addEventListener('change', e => {
     if(e.target.checked) {
       hightInstance.run()
